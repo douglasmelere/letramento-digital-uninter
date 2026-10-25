@@ -6,7 +6,7 @@ interface WelcomeScreenProps {
 
 const highlights = [
   'Aulas guiadas com vídeos e tutoriais passo a passo',
-  'Materiais em PDF disponíveis offline a qualquer momento',
+  'Materiais complementares para acompanhar as aulas',
   'Quizzes para validar o aprendizado de cada etapa',
   'Trilhas pensadas para a realidade das turmas presenciais',
 ];
@@ -21,9 +21,9 @@ export function WelcomeScreen({ onStart }: WelcomeScreenProps) {
             <ShieldCheck className="h-5 w-5" strokeWidth={2.5} />
             Trilha especializada para idosos
           </div>
-          <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl">
+          <h2 className="text-4xl font-bold text-gray-900 sm:text-5xl">
             Bem-vindo à Plataforma de Letramento Digital
-          </h1>
+          </h2>
           <p className="text-lg text-gray-700 leading-relaxed">
             Antes de mergulhar nas aulas, confira como a jornada foi organizada. Cada módulo
             combina vídeo, guia em PDF, checklist prático e quiz final para confirmar o domínio do conteúdo.
@@ -60,7 +60,7 @@ export function WelcomeScreen({ onStart }: WelcomeScreenProps) {
             <ol className="mt-8 space-y-4 text-lg text-gray-800">
               <li>1. Explique a trilha e as avaliações.</li>
               <li>2. Distribua os guias impressos para quem preferir.</li>
-              <li>3. Mostre como acessar os vídeos locais sem depender da internet.</li>
+              <li>3. Confira os links e materiais antes de começar a aula.</li>
               <li>4. Clique em “Começar jornada” junto com a turma.</li>
             </ol>
           </div>

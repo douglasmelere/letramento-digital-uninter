@@ -67,7 +67,7 @@ export function LessonView({
         Voltar aos Módulos
       </button>
 
-      <div className="bg-white rounded-2xl shadow-xl p-10 border-4 border-blue-100">
+      <div className="bg-white rounded-2xl shadow-xl p-5 sm:p-10 border-4 border-blue-100">
         <div className="mb-6">
           <span className="text-lg font-semibold text-blue-600">
             Aula {currentIndex + 1} de {totalLessons}
@@ -239,6 +239,7 @@ export function LessonView({
                 return (
                   <button
                     key={option}
+                    aria-pressed={isSelected}
                     onClick={() => !isQuizSubmitted && setSelectedOption(index)}
                     className={`w-full text-left px-5 py-4 rounded-xl border-2 text-lg font-semibold transition-all ${
                       isCorrect
@@ -267,6 +268,7 @@ export function LessonView({
               )}
               {isQuizSubmitted && lesson.quiz && (
                 <div
+                  role="status"
                   className={`flex-1 text-lg font-semibold p-4 rounded-xl ${
                     quizAnsweredCorrectly
                       ? 'bg-green-100 text-green-800'
@@ -290,7 +292,7 @@ export function LessonView({
           </div>
         )}
 
-        <div className="flex gap-4 mt-10">
+        <div className="flex flex-col sm:flex-row gap-4 mt-10">
           <button
             onClick={onPrevious}
             disabled={isFirst}

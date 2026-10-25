@@ -11,7 +11,7 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
         <div className="flex items-center gap-4">
           <img
-            src="/uninter-logo.png"
+            src={`${import.meta.env.BASE_URL}uninter-logo.png`}
             alt="Logo UNINTER"
             className="w-24 h-24 object-contain drop-shadow-md"
           />

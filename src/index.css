@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.skip-link { position: absolute; top: 0; left: 1rem; transform: translateY(-120%); z-index: 50; padding: 1rem; background: #fff; color: #1e3a8a; font-weight: 700; }
+.skip-link:focus { transform: translateY(0); }
+:focus-visible { outline: 3px solid #1d4ed8; outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}

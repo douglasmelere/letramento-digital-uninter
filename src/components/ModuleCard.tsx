@@ -31,13 +31,13 @@ export function ModuleCard({ module, onSelect }: ModuleCardProps) {
   return (
     <button
       onClick={onSelect}
-      className="w-full bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 text-left border-4 border-transparent hover:border-blue-300 focus:outline-none focus:ring-4 focus:ring-blue-300"
+      className="w-full bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-5 sm:p-8 text-left border-4 border-transparent hover:border-blue-300 focus:outline-none focus:ring-4 focus:ring-blue-300"
     >
-      <div className="flex items-start gap-6">
+      <div className="flex flex-col sm:flex-row items-start gap-6">
         <div className={`${module.color} p-6 rounded-2xl`}>
           <IconComponent className="w-12 h-12 text-white" strokeWidth={2.5} />
         </div>
-        <div className="flex-1">
+        <div className="flex-1 min-w-0">
           <h3 className="text-2xl font-bold text-gray-900 mb-3">
             {module.title}
           </h3>
